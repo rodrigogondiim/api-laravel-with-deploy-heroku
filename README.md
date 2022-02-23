@@ -17,7 +17,7 @@ Para da o inicio do projeto,execute a base de dados<br>
 execute o laravel artisan o comando : php artisan migrate  
 Onde executa e cria todas as tabelas automaticamente,atraves desse Artesao show de bola
 
-OBSSS: NAO ESQUECE DE ALTERAR O NOME DO BANCO DE DADOS
+<b>OBS</b>: NAO ESQUECE DE ALTERAR O NOME DO BANCO DE DADOS no laravel
 
 <h4>Tudo inserido ????</h4>
 
