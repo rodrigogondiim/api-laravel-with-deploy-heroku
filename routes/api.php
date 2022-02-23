@@ -16,7 +16,7 @@ use App\Http\Controllers\Api\PessoaController;
 |
 */
 
-Route::get("/cidades/existe/{cidade}", [CidadeController::class,"isExists"]);
+Route::post("/cidades/search", [CidadeController::class,"search"]);
 Route::apiResource('cidades', CidadeController::class);
 Route::apiResource('pessoas', PessoaController::class);
 

@@ -131,9 +131,10 @@ class CidadeController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function isExists($id,Request $req){
+    public function search(Request $req ){
 
-            $rows = $this->cidade::where("nome",$id)->first();
+           $rows=  $this->cidade->where(DB::raw('lower(nome)'), strtolower($req->nome))->first();
+
             if($rows){
                 return response()->json(["sucess"=>"Retornado" ,"Data"=>"A cidade ".$rows->nome." existe"]);
             }
