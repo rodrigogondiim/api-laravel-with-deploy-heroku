@@ -4,9 +4,9 @@
  Para da o inicio do projeto,execute a base de dados<br>
 
  
- 1 - Crie o banco de dados gestao 
- 2 - Exucute a criaçao tabelas(estados,cidades,pessoas,logs)
- 3 - Execute os inserts Estados 4 - Execute os inserts Cidades 
+ 1 - Crie o banco de dados gestao <br>
+ 2 - Exucute a criaçao tabelas(estados,cidades,pessoas,logs)<br>
+ 3 - Execute os inserts Estados 4 - Execute os inserts Cidades <br>
 
 
 ### SCHEMA SQL: 
