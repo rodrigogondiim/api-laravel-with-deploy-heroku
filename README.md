@@ -13,13 +13,12 @@ execute a base de dados<br>
 ;
 #Armazenado no caminho <b>Database/Schema.SQL</b>
 
-<h4>OU se preferir</h4>
-
-OBSSS: NAO ESQUECE DE ALTERAR O NOME DO BANCO DE DADOS
+<h3>OU se preferir</h3>
 
 execute o laravel artisan o comando : php artisan migrate  
 Onde executa e cria todas as tabelas automaticamente,atraves desse Artesao show de bola
 
+OBSSS: NAO ESQUECE DE ALTERAR O NOME DO BANCO DE DADOS
 
 <h4>Tudo inserido ????</h4>
 
