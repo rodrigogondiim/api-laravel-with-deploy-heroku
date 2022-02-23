@@ -1,8 +1,7 @@
 <h1>Começo</h1>
 <hr>
 
-Para da o inicio do projeto,<br>
-execute a base de dados<br>
+Para da o inicio do projeto,execute a base de dados<br>
 1 - crie o banco de dados gestao <br>
 2 - exucute a criaçao tabelas(estados,cidades,pessoas,logs)<br>
 2 - execute os inserts Estados<br>
