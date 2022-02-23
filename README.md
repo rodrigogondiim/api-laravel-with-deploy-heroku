@@ -1,11 +1,12 @@
 <h1>Começo</h1>
+<hr>
 
-Para da o inicio do projeto,
-execute a base de dados
-1 - crie o banco de dados gestao
-2 - exucute a criaçao tabelas(estados,cidades,pessoas,logs)
-2 - execute os inserts Estados
-3 - execute os inserts Cidades
+Para da o inicio do projeto,<br>
+execute a base de dados<br>
+1 - crie o banco de dados gestao <br>
+2 - exucute a criaçao tabelas(estados,cidades,pessoas,logs)<br>
+2 - execute os inserts Estados<br>
+3 - execute os inserts Cidades<br>
  
  SCHEMA SQL:
  https://github.com/rodrigogondiim/Teste-Backend-InCicle/blob/master/database/schema.sql
