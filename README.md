@@ -27,12 +27,12 @@ execute o comando no repositório: ```bash php artisan migrate ```
 
 **Tudo inserido?**
 
- Agora é hora de ver essa api show de bola voando as rotas utilizadas foram:
- ``` GET /api/cidades ```
- ``` GET /api/cidades/id ```
- ``` POST /api/cidades ```
- ``` POST /api/pessoas ```
- ``` PUT /api/cidades/id ```
+ Agora é hora de ver essa api show de bola voando as rotas utilizadas foram:<br>
+ ``` GET /api/cidades ```<br>
+ ``` GET /api/cidades/id ```<br>
+ ``` POST /api/cidades ```<br>
+ ``` POST /api/pessoas ```<br>
+ ``` PUT /api/cidades/id ```<br>
 
 
 #### Listando todas as cidades
