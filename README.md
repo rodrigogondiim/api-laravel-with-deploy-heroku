@@ -8,7 +8,7 @@
  2 - Exucute a criaçao tabelas(estados,cidades,pessoas,logs)<br>
  3 - Execute os inserts Estados 4 - Execute os inserts Cidades <br>
 
-
+#### HOSTZIM : [API_NO_HOST](https://host-mundao.herokuapp.com/api/cidades)
 ### SCHEMA SQL: 
 
 execute o comando no repositório: ```bash php artisan migrate ```  
