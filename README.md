@@ -68,7 +68,7 @@ Passando o id da cidade,e o campo no json<br>
 #### Teste Unitários com PHP Unit
 Testes unitários mediante a essas rotas e seus respectivos retornos foram realizado os teste com o PHP UNIT .![image](https://user-images.githubusercontent.com/99778340/155345511-49bf106d-bc7e-4840-9446-c7a2574a2a5e.png)
 ### Agora é hora de inserir na tabela pessoas 
-Só basta fazer a requisiçao para a rota <br> ``` POST api/pessoas```
+Só basta fazer a requisiçao para a rota <br> ``` POST /api/pessoas```
 ![image](https://user-images.githubusercontent.com/99778340/155353472-bfb9eedb-74ba-4865-96da-d979e3876dc8.png)
  
  Onde tambem ocorre a validação para ver se cidade e estado que o usuario esta tentando inserir existe no banco.
