@@ -66,13 +66,20 @@ class CustomerTest extends TestCase
         
     }
     public function test_exists_cidade(){
-        $cidade = Cidade::factory()->create();
-        $response = $this->getJson("/api/cidades/existe/{$cidade->nome}");
+        $response = $this->getJson("/api/cidades/search",
+    [
+        "nome" => "salvador"
+    ]
+    );
         $response->assertStatus(200);
     }
     public function test_exists_not_found_cidade(){
         
-        $response = $this->getJson("/api/cidades/existe/fake");
+        
+        $response = $this->postJson('/api/cidades',
+        [
+           "nome" => "fake" 
+        ]);
         $response->assertStatus(422);
     }
 
