@@ -76,7 +76,7 @@ class CustomerTest extends TestCase
     public function test_exists_not_found_cidade(){
         
         
-        $response = $this->postJson('/api/cidades',
+        $response = $this->postJson('/api/cidades/search',
         [
            "nome" => "fake" 
         ]);
