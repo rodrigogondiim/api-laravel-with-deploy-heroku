@@ -44,35 +44,25 @@ class CidadeController extends Controller
     public function store(CidadeStore $req)
     {
         // dd($req->validated()['estado']);
-            $isExists = Estado::where("nome" ,"=",$req->validated()['estado'] );
-            if($isExists->exists()){
-
-                $cidadeExis = $this->cidade::
-                 where("estado_id","=", $isExists->first()->id)
-                ->where("nome","=", $req->validated()['cidade'])
-                ->select("cidades.nome as cidadenome", "estado_id");
-
-                if($cidadeExis->exists()){ 
-                    return response()->json(["erro"=> "estado já tem essa cidade"]);
-                }
-                        $this->cidade::create([
-                            "nome" => $req->cidade,
-                            "estado_id" => $isExists->first()->id
-                        ]);
-                        return response()->json(["sucess"=>  "cadastro realizado com sucesso"],201);
-            }
-                
+            $isExists = Estado::where("nome",$req->validated()['estado'] );
+            if(!$isExists->exists()){
                 $idEstado =$this->estado::insertGetId(
                     ['nome' => $req->validated()['estado']]
                 );
+            }
+             
+            $cidadeExis = $this->cidade::where("estado_id", $isExists->first()->id)
+            ->where("nome", $req->validated()['cidade']);
+
+           if($cidadeExis->exists()){ 
+               return response()->json(["erro"=> "estado já tem essa cidade"],400);
+           }
+            $this->cidade::create([
+                "nome" => $req->cidade,
+                    "estado_id" => $isExists->first()->id
+            ]);
+            return response()->json(["sucess"=>  "cadastro realizado com sucesso"],201);
                 
-                $this->cidade::create([
-                    "nome" => $req->validated()['cidade'],
-                    "estado_id" => $idEstado
-                ]);
-
-                return response()->json(["sucess"=>  "cadastro realizado com sucesso"],201);
-
     }
 
     /**
@@ -86,16 +76,13 @@ class CidadeController extends Controller
             $rows =Estado::join("cidades as c","estados.id","=","c.estado_id")
             ->where("estados.id",$id);
 
-            // dd($rows);
             if(!$rows->first()){
                 return response()->json(["erro"=>"Estado nao encontrado",404]);
 
             }
         
             return response()->json(["sucess"=> "Retornado", "Data" => $rows->select("estados.id as id_estado","estados.nome as estado_nome","c.nome as nome_cidade")
-            ->paginate(10)],200);
-        
-     
+            ->paginate(10)],200);     
 
     }
 
@@ -110,18 +97,17 @@ class CidadeController extends Controller
     {
        
         $statesExists = $this->cidade
-        ->join('estados', 'estados.id', '=', 'cidades.estado_id')->where("cidades.id", "=" ,$id)
-        ->select( 'cidades.id','cidades.nome', 'estados.id as estadoid','estados.nome as estadonome');
+        ->join('estados', 'estados.id', '=', 'cidades.estado_id')
+        ->where("cidades.id",$id);
 
             if($statesExists->exists()){
 
-                $this->cidade::where("id","=",$id)->update(['nome' => $req->cidade],$id);
-                return response()->json(["sucess" => "Alterado com sucesso"]);
+                $this->cidade::where("id",$id)->update(['nome' => $req->cidade],$id);
+                return response()->json(["sucess" => "Alterado com sucesso"],200);
 
             }
 
             return response()->json(["erro" => "cidade nao existe"],422);
-
     }
 
     /**
