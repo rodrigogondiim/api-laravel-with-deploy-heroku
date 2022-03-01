@@ -6,12 +6,13 @@
  
  1 - Crie o banco de dados gestao <br>
  2 - Exucute a criaçao tabelas(estados,cidades,pessoas,logs)<br>
- 3 - Execute os inserts Estados 4 - Execute os inserts Cidades <br>
+ 3 - Execute os inserts Estados <br>
+ 4 - Execute os inserts Cidades <br>
 
 #### HOST : [API_HEROKU](https://host-mundao.herokuapp.com/api/cidades)
 ### SCHEMA SQL: 
 
-execute o comando no repositório: ```bash php artisan migrate ```  
+execute o comando no repositório: ``` php artisan migrate ```  
 
 [Inserir registro nas tabelas](https://github.com/rodrigogondiim/Teste-Backend-InCicle/blob/master/database/schema.sql)
 
